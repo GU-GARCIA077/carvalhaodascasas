@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carvalhão das casas</title>
+    <link rel="shortcut icon" href="../IMOBILIARIA/imagens/casasfavicon.ico" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image:linear-gradient(45deg,darkolivegreen,black) ; 
+
+        }
+        ::-webkit-scrollbar {
+        width:15px;
+        height: 5px;
+        }
+        ::-webkit-scrollbar-track {
+        background:linear-gradient(45deg, darkolivegreen,silver);
+        }
+        ::-webkit-scrollbar-thumb {
+        background:linear-gradient(45deg, silver,darkolivegreen);
+        border:1px solid black;
+        border-radius: 10px;
+        }
+        header{
+            background:linear-gradient(45deg,black,silver);
+        }
+        #img1{
+            border-radius: 5px;
+        }
+        h1,h2,h3{
+            font-style: italic;
+            color:whitesmoke;
+            text-decoration:none;
+            text-shadow: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #offcanvasRight{
+            background-color: darkolivegreen;
+            max-height: 300px;
+            border-radius: 5px;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        h5{ 
+            font-style: italic;
+            text-decoration: underline;
+           
+        }
+       
+       .nav-link:link{
+        color:darkgreen;
+       }
+        a:active{
+        color: darkgreen;
+       }
+       
+       .nav-link:hover{
+        color: blanchedalmond;
+       }
+       .nav-link:visited{
+        color: blanchedalmond;
+       }
+       .selects,#procura{
+        background-color: darkolivegreen;
+        width: 200px;
+        height: 50px;
+        border-radius: 5px;
+        border: 1px solid black;
+        color: white;
+       }
+       #envia{
+        border: none;
+        background-color: darkolivegreen;
+        color: white;
+       }
+       #form_filtro{
+        width: 80%;
+        background-color:thistle;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: 2px solid darkgreen;
+    
+       }
+       .box-search{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+       }
+       fieldset{
+        color: #003;
+       }
+       .divcab{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+       }
+       #txthome{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+       }
+       #btn1{
+        background-color: darkgreen;
+        border: 1px solid black;
+       }
+       #carouselExampleInterval{
+        width: 60%;
+        border: 1px solid white;
+        border-radius: 10px;
+       }
+       #imgcarrossel{
+        width: 60%;
+        height:400px ;
+        border-radius: 10px;
+       }
+       #centraliza{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+
+       }
+       .card,.list-group-item{
+        background-color:thistle ;
+        color:black ;
+        text-align: center;
+        border:1px solid darkgreen ;
+        border-radius:5px;
+        margin: 1%;
+        height: max-content;
+       }
+      #preço{
+        font-size: large;
+      }
+      #branco{color:white ;}
+      #imgc2{
+        width:300px ;
+        height:300px ;
+        border-radius: 5px;
+      }
+      #modal{
+        background-color: darkolivegreen;
+        border-radius: 5px;
+      }
+      #m2teste{
+            background-color:darkolivegreen ;
+            border-radius:5px ;
+        }
+        #moda3l{
+            background-color: darkolivegreen;
+            border-radius: 5px;
+        }
+      #f1{
+        width: 100%;
+        height:230px ;
+      }
+      #fieldset2{color: black;
+        width: auto;
+        
+    }
+      #NewsLetterform{
+        width: 50%;
+        background-color:thistle;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: 2px solid darkgreen;
+        opacity:0.8 ;
+        color: black;
+      }
+      #fundo{
+        background-image:url(https://img-4.linternaute.com/a2wjTQPut1g7Okvitr8wuxtEeYY=/1240x/smart/6072cc9cbc6b49bebd555c190d511ebe/ccmcms-linternaute/10346361-saota.jpg) ;
+        height:400px ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #fundocontato{
+        background-image: url(../IMOBILIARIA/imagens/fundocontatos.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity:0.8 ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #redessociais{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+    #ladin{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 10%;
+        padding-left: 10px;
+    }
+    #endcenter{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+    }
+    #mapa{
+        width: 80%;
+        height: 500px;
+        border-radius:5px ;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #gmaps{
+        min-width:600px; 
+        height:450px;
+        display: flex;
+        flex-wrap: wrap;
+        border: 2px solid black;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+    #ultimo{
+        background:linear-gradient(45deg,silver,darkolivegreen);
+        color:black;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        font-size: larger;
+    }
+    #slide_top {
+    position:fixed;
+    right:1rem;
+    bottom:1rem;
+    z-index:998;
+    display:none;
+    width:45px;
+    height:45px;
+	background:linear-gradient(45deg, silver, darkolivegreen);
+    text-indent:-9999px;
+    border: 1px solid black;
+    border-radius: 10px;
+	-webkit-transition:opacity .2s ease-in-out 0s, display .3s ease-in-out 0s;
+	-moz-transition:opacity .2s ease-in-out 0s, display .3s ease-in-out 0s;
+	-ms-transition:opacity .2s ease-in-out 0s, display .3s ease-in-out 0s;
+	-o-transition:opacity .2s ease-in-out 0s, display .3s ease-in-out 0s;
+	transition:opacity .2s ease-in-out 0s, display .3s ease-in-out 0s;
+}
+
+#slide_top:before {
+	content: "";
+	position: absolute;
+	top:16px;
+	left:18px;
+	border:5px solid transparent;
+	border-bottom-color: black;
+	-webkit-transition:border-color .2s ease-in-out;
+	-moz-transition:border-color .2s ease-in-out;
+	-ms-transition:border-color .2s ease-in-out;
+	-o-transition:border-color .2s ease-in-out;
+	transition:border-color .2s ease-in-out;
+}
+    </style>
+</head>
+<body>
+    <header  id="anc0">
+        <div class="container-fluid">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img id="img1" src="../IMOBILIARIA/imagens/logo.png" alt="logo carvalhao das casas" width="300" height="200" class="d-inline-block align-text-top">
+                    </a>
+                    <div class="divcab">
+                        <h1>Carvalhão das Casas</h1><br>
+                        <h3>"O cara da casa certa pra você"</h3>
+                       
+                    </div>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btn1">Menu<svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 10 10">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg></button>
+
+                    <div class="offcanvas offcanvas-end" data-bs-scroll="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Menu Principal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" id="menulat">
+                        <nav class="nav flex-column">
+                            <a class="nav-link" aria-current="page" href="#anc1"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house-heart-fill" viewBox="0 0 16 16">
+                                <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707L7.293 1.5Z"/>
+                                <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9.293Zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018Z"/>
+                              </svg></span>  Sobre nós</a>
+                            <a class="nav-link" href="#anc2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-buildings" viewBox="0 0 16 16">
+                                <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z"/>
+                                <path d="M2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-2 2h1v1H2v-1Zm2 0h1v1H4v-1Zm4-4h1v1H8V9Zm2 0h1v1h-1V9Zm-2 2h1v1H8v-1Zm2 0h1v1h-1v-1Zm2-2h1v1h-1V9Zm0 2h1v1h-1v-1ZM8 7h1v1H8V7Zm2 0h1v1h-1V7Zm2 0h1v1h-1V7ZM8 5h1v1H8V5Zm2 0h1v1h-1V5Zm2 0h1v1h-1V5Zm0-2h1v1h-1V3Z"/>
+                              </svg> Imóveis</a>
+                            <a class="nav-link" href="#anc3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-plus" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                <path fill-rule="evenodd" d="M12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5z"/>
+                              </svg> Contatos</a>
+                            <a class="nav-link" href="#anc4" aria-disabled="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                              </svg> Endereço</a>
+                              <a class="nav-link" href="tela_login.php" aria-disabled="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-lock" viewBox="0 0 16 16">
+                                <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"/>
+                                <path d="M10 13a1 1 0 0 1 1-1v-1a2 2 0 0 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z"/>
+                              </svg> Área restrita</a>
+                          </nav>
+                    </div>
+                    </div>
+                  
+                </div>
+                
+            </nav>
+        </div>
+    </header>
+    <section id="fundo">
+        <div class="container-fluid" id="form_filtro">
+            <form action="pesquisadin.php" method="post">
+                <legend><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg> Busque seu imóvel perfeito:</legend>
+                <fieldset>
+                    <div class="box-search">
+                        <input type="search" name="pesquisa" class="form-control" placeholder="Digite como deseja seu imóvel, ex: Casa para alugar..." id="pesquisatudo">
+                        <button id="procura" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search-heart-fill" viewBox="0 0 16 16">
+                                <path d="M6.5 13a6.474 6.474 0 0 0 3.845-1.258h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.008 1.008 0 0 0-.115-.1A6.471 6.471 0 0 0 13 6.5 6.502 6.502 0 0 0 6.5 0a6.5 6.5 0 1 0 0 13Zm0-8.518c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"/>
+                              </svg>
+                        </button>
+                    </div>
+                    
+                </fieldset>
+            </form> 
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div class="container-fluid" id="anc1">
+           <div id="txthome"> 
+                <h2>Sobre nós:</h2>
+                <p>Está buscando um imóvel? veio ao lugar certo!</p>
+                <P>Fundada em 2023, a <b>Carvalhão das casas</b> dedica-se a proporcionar a melhor qualidade do mercado imobiliário para Barreiras e região do oeste baiano!</P>
+                <p>Disponibilizamos as melhores transações para compra, venda e locação de imóveis</p>
+                <p>Duvidou? confira nossas oportunidades e feche já seu negócio</p>
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="2000">
+                        <img id="imgcarrossel" src="../IMOBILIARIA/imagens/Slide1.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img id="imgcarrossel" src="../IMOBILIARIA/imagens/Slide2.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img id="imgcarrossel" src="../IMOBILIARIA/imagens/slide3.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div> 
+        </div>
+        <hr>
+    </section>
+    <section>
+        <div class="container-fluid" id="anc2">
+            <div id="centraliza">
+                <h2>Imóveis:</h2><br>
+                <div class="card-group">
+                    <div class="card" style="width: 20rem;">
+                        <img id="f1" src="../IMOBILIARIA/imagens/Casacard1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa a venda - Jardim Vitória / Barreiras-BA (Leia a descrição)</h5>
+                        </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                                    <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17 1.247 0 3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
+                                  </svg> 1 Vaga</li>
+                                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bricks" viewBox="0 0 16 16">
+                                    <path d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z"/>
+                                  </svg> 3 quartos</li>
+                                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rulers" viewBox="0 0 16 16">
+                                    <path d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5v-1H2v-1h4v-1H4v-1h2v-1H2v-1h4V9H4V8h2V7H2V6h4V2h1v4h1V4h1v2h1V2h1v4h1V4h1v2h1V2h1v4h1V1a1 1 0 0 0-1-1H1z"/>
+                                  </svg> 79 m²</li>
+                                <li class="list-group-item">
+                                    <span class="material-symbols-outlined">bathtub</span> 1 suíte + 1 Banheiro Social
+                                </li>
+                            </ul>
+                        <div class="card-body">
+                               <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Descrição
+                            </button>
+  
+                                    <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div id="modal" class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div id="modal" class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Casa a venda - Jardim Vitória / Barreiras-BA</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div id="modal" class="modal-body">
+                                            <div  class="carousel slide" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active" data-bs-interval="2000">
+                                                        <img  id="imgc2" src="../IMOBILIARIA/imagens/Casacard1.jpg" class="d-block w-100" alt="fachada">
+                                                    </div>
+                                                    <div class="carousel-item" data-bs-interval="2000">
+                                                        <img id="imgc2" src="../IMOBILIARIA/imagens/Casacard1a.jpg" class="d-block w-100" alt="cozinha">
+                                                    </div>
+                                                    <div class="carousel-item" data-bs-interval="2000">
+                                                        <img id="imgc2" src="../IMOBILIARIA/imagens/Casacard1b.jpg" class="d-block w-100" alt="entrada">
+                                                    </div>
+                                                    <div class="carousel-item" data-bs-interval="2000">
+                                                        <img id="imgc2" src="../IMOBILIARIA/imagens/Casacard1c.jpg" class="d-block w-100" alt="banheiro">
+                                                    </div>
+                                                    <div class="carousel-item" data-bs-interval="2000">
+                                                        <img id="imgc2" src="../IMOBILIARIA/imagens/Casacardd.jpg" class="d-block w-100" alt="sala">
+                                                    </div>
+                                                    <div class="carousel-item" data-bs-interval="2000">
+                                                        <img  id="imgc2" src="../IMOBILIARIA/imagens/Casacard1e.jpg" class="d-block w-100" alt="quartosuite">
+                                                    </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div><br>
+                                                    <p>Está procurando uma casa, para chamar de sua?</p> 
+                                                    <p>Está buscando a realização de um sonho? Não perca esta oportunidade! 
+                                                    <p>Casa com 3 quartos sendo 1 suíte, 1 sala, 1 banheiro social e garagem. Possui um jardim de inverno na suíte, que garante uma excelente ventilação. 
+                                                    <p>Recém reformada, com ótimo acabamento, no Jardim Vitória. Muito bem localizada e com rua pavimentada, num bairro pacato e sossegado.
+                                                    <p>Próximo a praça, para você que gosta de se exercitar, levar seus filhos para brincar ou passear com seu bichinho de estimação.
+                                                    <p id="preço"> Valor de venda: <strong>R$ 235.000,00</strong></p>
+                                        </div>
+                                        <div id="modal" class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                                            <button type="button" class="btn btn-success"><a href="https://wa.link/21ka30"><span id="branco">Fale Conosco</span></a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Última atualização à 1min</small>
+                        </div>
+                    </div>
+                    <!-- segundo imóvel-->
+                    <div class="card" style="width: 20rem;">
+                        <img id="f1" src="../IMOBILIARIA/imagens/Ap1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Apartamento p/ locação - Centro / Barreiras-BA (Leia a descrição)</h5>
+                        </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                                    <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17 1.247 0 3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
+                                  </svg> 0 Vaga</li>
+                                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bricks" viewBox="0 0 16 16">
+                                    <path d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z"/>
+                                  </svg> 2 quartos</li>
+                                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rulers" viewBox="0 0 16 16">
+                                    <path d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5v-1H2v-1h4v-1H4v-1h2v-1H2v-1h4V9H4V8h2V7H2V6h4V2h1v4h1V4h1v2h1V2h1v4h1V4h1v2h1V2h1v4h1V1a1 1 0 0 0-1-1H1z"/>
+                                  </svg> 60 m²</li>
+                                <li class="list-group-item">
+                                    <span class="material-symbols-outlined">bathtub</span> 1 Banheiro Social
+                                </li>
+                            </ul>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#m2teste">
+                                Descrição
+                            </button>
+                                    <!-- segundo Modal -->
+                            <div class="modal fade" id="m2teste" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div id="m2teste" class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div id="m2teste" class="modal-content">
+                                        <div id="m2teste" class="modal-header">
+                                            <h5 class="modal-title" id="modaltwoLabel">Apartamento para locação - Centro / Barreiras-BA</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div id="m2teste"  class="modal-body">  
+                                            <div  class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active" data-bs-interval="2000">
+                                                    <img  id="imgc2" src="../IMOBILIARIA/imagens/Ap1a.jpg" class="d-block w-100" alt="fachada">
+                                                </div>
+                                                <div class="carousel-item" data-bs-interval="2000">
+                                                    <img id="imgc2" src="../IMOBILIARIA/imagens/Ap1b.jpg" class="d-block w-100" alt="cozinha">
+                                                </div>
+                                                <div class="carousel-item" data-bs-interval="2000">
+                                                    <img id="imgc2" src="../IMOBILIARIA/imagens/Ap1c.jpg" class="d-block w-100" alt="entrada">
+                                                </div>
+                                                <div class="carousel-item" data-bs-interval="2000">
+                                                    <img id="imgc2" src="../IMOBILIARIA/imagens/Ap1d.jpg" class="d-block w-100" alt="banheiro">
+                                                </div>
+                                                <div class="carousel-item" data-bs-interval="2000">
+                                                    <img id="imgc2" src="../IMOBILIARIA/imagens/Ap1e.jpg" class="d-block w-100" alt="sala">
+                                                </div>
+                                                <div class="carousel-item" data-bs-interval="2000">
+                                                    <img  id="imgc2" src="../IMOBILIARIA/imagens/Ap1f.jpg" class="d-block w-100" alt="quartosuite">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div><br>
+
+                                                <p>More no centro da cidade em um apartamento aconchegante!</p>
+                                                <p>O Apê que irá te proporcionar conforto e praticidade no dia a dia está perto de ser seu cantinho.</p>
+                                                <p>Com 2 quartos amplos e arejados o apartamento que foi reformado ainda dispões de sala para dois ambientes, cozinha e área de serviços. Ideal para você que procura agilizar suas tarefas e estar perto de tudo.</p>
+                                                <p>Não perca a oportunidade de estar onde a vida acontece!</p>
+                                                <p id="preço"> Valor de Aluguel: <strong>R$ 1.500,00</strong></p>
+                                        </div>
+                                        <div id="m2teste" class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                                            <button type="button" class="btn btn-success"><a href="https://wa.link/21ka30"><span id="branco">Fale Conosco</span></a></button>
+                                        </div>
+                                    </div>
+                                </div>       
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Última atualização à 1min</small>
+                        </div> 
+                    </div>
+                    <!-- terceiro imóvel-->
+                    <div class="card" style="width: 20rem;">
+                        <img id="f1" src="../IMOBILIARIA/imagens/Pc1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ponto Comercial- Renato Gonçalves / Barreiras-BA (Leia a descrição)</h5>
+                        </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                                    <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17 1.247 0 3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
+                                  </svg> 3 Vagas</li>
+                                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bricks" viewBox="0 0 16 16">
+                                    <path d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z"/>
+                                  </svg> 3 portas + espaço para escritório</li>
+                                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rulers" viewBox="0 0 16 16">
+                                    <path d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5v-1H2v-1h4v-1H4v-1h2v-1H2v-1h4V9H4V8h2V7H2V6h4V2h1v4h1V4h1v2h1V2h1v4h1V4h1v2h1V2h1v4h1V1a1 1 0 0 0-1-1H1z"/>
+                                  </svg> 245 m²</li>
+                                <li class="list-group-item">
+                                    <span class="material-symbols-outlined">bathtub</span> 1 Banheiro Social
+                                </li>
+                            </ul>
+                        <div class="card-body">
+                               <!-- Button trigger modal3 -->
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#moda3l">
+                                Descrição
+                            </button>
+  
+                                    <!-- Modal3 -->
+                            <div class="modal fade" id="moda3l" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div id="moda3l" class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div id="moda3l" class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Ponto Comercial- Renato Gonçalves / Barreiras-BA </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div id="moda3l" class="modal-body">
+                                            <div  class="carousel slide" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active" data-bs-interval="2000">
+                                                        <img  id="imgc2" src="../IMOBILIARIA/imagens/Pc1.jpg" class="d-block w-100" alt="fachada">
+                                                    </div>
+                                                    <div class="carousel-item" data-bs-interval="2000">
+                                                        <img id="imgc2" src="../IMOBILIARIA/imagens/Pc1a.jpg" class="d-block w-100" alt="sala principal">
+                                                    </div>
+                                                    <div class="carousel-item" data-bs-interval="2000">
+                                                        <img id="imgc2" src="../IMOBILIARIA/imagens/Pc1b.jpg" class="d-block w-100" alt="entrada">
+                                                    </div>
+                                                    <div class="carousel-item" data-bs-interval="2000">
+                                                        <img id="imgc2" src="../IMOBILIARIA/imagens/Pc1c.jpg" class="d-block w-100" alt="banheiro">
+                                                    </div>
+                                                    <div class="carousel-item" data-bs-interval="2000">
+                                                        <img id="imgc2" src="../IMOBILIARIA/imagens/Pc1d.jpg" class="d-block w-100" alt="sala">
+                                                    </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div><br>
+                                                    <p>Ponto comercial com localização incrível margeado com uma grande e diversificada área comercial, disponível para locação em nosso portfólio.</p> 
+                                                    <p>Sua localização é totalmente requisitada e nós lhe oferecemos uma excelente opção para investir e alcançar novos patamares com a colocação de uma delicatessen requintada para atender a dinâmica do bairro, frigorífico, laboratório, hiperfruta, dentre outras opções comerciais.</p>
+                                                    <p>São três portas de 03 metros cada, depósito, 01 banheiro, espaço para escritório, piso de granitina de alta resistência, estacionamento, laje com 6,10 de altura, possibilidade para mezanino, pé direito triplo e propensa sacada para a rua .</p>
+                                                    <p>Permita-se conhecer está oportunidade!!!</p>
+                                                    <p id="preço"> Valor de Aluguel: <strong>R$ 9.200,00</strong></p>
+                                        </div>
+                                        <div id="moda3l" class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                                            <button type="button" class="btn btn-success"><a href="https://wa.link/21ka30"><span id="branco">Fale Conosco</span></a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Última atualização à 1min</small>
+                        </div>
+                    </div>
+
+                </div> <br>
+            <button type="button" class="btn btn-success"><a class="nav-link" href="imprimir.php">Ver todos os imóveis</a></button>
+            </div> 
+        </div>       
+    </section>
+    <hr>
+    <section id="fundocontato">
+        <div class="container-fluid" id="anc3">
+            <div id="centraliza">
+                <h2><strong>Contatos:</strong></h2><br>
+                <p><strong>Não encontrou o imóvel do seu sonho?</strong></p>
+                <p><strong>Assine nossa NewsLetter e fique por dentro das novidades!</strong></p>
+                <div id="NewsLetterform">
+                    <form action="" method="post">
+                        <legend><strong>NewsLetter</strong></legend><br>
+                        <fieldset id="fieldset2">
+                            <label for="nome"><b>Nome:</b></label><br>
+                            <input type="text" id="nome" placeholder="Insira seu Nome:"><br>
+                            <label for="email"><b>Email:</b></label><br>
+                            <input type="email" id="email" placeholder="exemplo@email.com" required><br>
+                            <label for="telefone"><b>Telefone:</b></label><br>
+                            <input type="tel" id="telefone" placeholder="(ddd)9xxxx-xxxx" required><br>
+                            <label for="cidade"><b>Cidade:</b></label><br>
+                            <input type="text" id="cidade" placeholder="Insira sua cidade:"><br><br>
+                            <label for="estado"><b>Estado:</b></label>
+                            <select name="" id="estado">
+                                <option value="Acre">AC</option>
+                                <option value="Alagoas">Al</option>
+                                <option value="Amapá">AP</option>
+                                <option value="Amazonas">AM</option>
+                                <option value="Bahia">BA</option>
+                                <option value="Ceará">CE</option>
+                                <option value="Distrito Federal">DF</option>
+                                <option value="Espírito Santo">ES</option>
+                                <option value="Goiás">GO</option>
+                                <option value="Maranhão">MA</option>
+                                <option value="Mato Grosso">MT</option>
+                                <option value="Mato Grosso do sul">MS</option>
+                                <option value="Minas gerais">MG</option>
+                                <option value="Pará">PA</option>
+                                <option value="Paraíba">PB</option>
+                                <option value="Paraná">PR</option>
+                                <option value="Pernambuco">PB</option>
+                                <option value="Piauí">PI</option>
+                                <option value="Rio de Janeiro">RJ</option>
+                                <option value="Rio Grande do Norte">RN</option>
+                                <option value="Rio Grande do Sul">RS</option>
+                                <option value="Rondônia">RO</option>
+                                <option value="Roraima">RR</option>
+                                <option value="Santa Catarina">SC</option>
+                                <option value="São Paulo">SP</option>
+                                <option value="Sergipe">SE</option>
+                                <option value="Tocantins">TO</option>
+                            </select><br>
+                            <label for="idade"><b>Idade:</b></label><br>
+                            <input type="number" placeholder="Insira sua idade:"><br>
+                            <label for="sexo"><b>Sexo:</b></label><br>
+                            <input type="radio" name="sexo" id="sexom" value="Masc"><label for="radio"><b>Masculino</b></label>
+                            <input type="radio"  name="sexo" id="sexof"value="Fem"><label for="radio"><b>Feminino</b></label><br>
+                            <label for="motivo"><b>Motivo do contato:</b></label><br>
+                            <input type="checkbox" name="box[]" id="b1" value="Dúvida"><label for="motivo"><b>Dúvida</b></label>
+                            <input type="checkbox" name="box[]" id="b2" value="Elogio"><label for="motivo"><b>Elogio</b></label>
+                            <input type="checkbox" name="box[]" id="b1" value="Outro"><label for="motivo"><b>Outro</b></label><br>
+                            <label for="mensagem"><b>Mensagem:</b></label><br>
+                            <textarea name="mensagem" id="msg" cols="23" rows="5" placeholder="Insira aqui sua dúvida, elogio ou uma mensagem que desejar..."></textarea><br>
+                            <input type="submit" value="Enviar" class=" btn btn-success"><input type="reset" value="Limpar" class=" btn btn-danger">
+                        </fieldset>
+                    </form>
+                </div>
+            </div><br><br>
+            <div class="" id="redessociais">
+                <h5><Strong>Se preferir entre em contato conosco nas redes sociais:</Strong></h5><br>
+                <div class="ladin">
+                    <a href="https://wa.link/21ka30">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16" style="color:darkgreen" >
+                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                        </svg>
+                    </a>
+                    <a href="https://t.me/GustavoCarvalho077">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/gustavo_carvalhol/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16" style="color:firebrick">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gustavo-carvalho-223b7a250/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                          </svg>
+                    </a>
+                    <a href="mailto: gustavocarvalho.gc79@gmail.com?">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16" style="color:darkred">
+                            <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"/>
+                            <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"/>
+                        </svg>
+                    </a>
+                </div>    
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div class="container-fluid" id="anc4">
+            <div id="endcenter">
+                <h2><strong>Endereço:</strong></h2><br>
+                <p>Faça-nos uma visita e negocie seu imóvel dos sonhos!</p><br>
+                <div id="mapa" class="container-fluid">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.5769149044064!2d-45.00399144028339!3d-12.138451599999991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x934acaabede6c355%3A0xe6571b1046fdf770!2sR.%20Elp%C3%ADdio%20Nunes%20da%20Mata%2C%20171a%20-%20Barreirinhas%2C%20Barreiras%20-%20BA%2C%2047810-575!5e0!3m2!1spt-BR!2sbr!4v1680184643737!5m2!1spt-BR!2sbr"  id="gmaps"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section><br>
+    <footer id="ultimo">
+        <p>Desenvolvido por <Strong>Gustavo Carvalho</Strong> - todos os direitos reservados</p>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+            </svg>
+            Carvalhão das casas - 2023
+        </p>
+    
+    </footer>
+    <!--botão topo-->
+    <a href="#anc0" id="slide_top" style="display:inline ;">
+        ::before
+        <span id="slide_top_hover" style="opacity:0;"></span>
+    </a>
+    <!--alerta de cookies-->
+    <div class="alert alert-success alert-dismissible fade show fixed-bottom" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>
+        <strong> Utilizamos cookies!</strong> entenda nossa <a href="https://www.ssradv.com.br/informativos/politica-de-privacidade-e-cookies-saiba-como-funcionam/" class="alert-link">política de privacidade.</a>.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
